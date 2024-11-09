@@ -1,9 +1,29 @@
 require 'telegram_bot'
 require 'dotenv/load'
+require 'net/http'
+require 'json'
 
 token = ENV['TELEGRAM_BOT_TOkEN']
 
 bot = TelegramBot.new(token:token)
+
+commands = [
+    {command:'start',description:'starts the bot'},
+    {command: 'help', description: 'Displays help' },
+    {command: 'ruby_version', description: 'Displays the current Ruby version'}
+]
+
+uri = URI("https://api.telegram.org/bot#{token}/setMyCommands")
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Post.new(uri.request_uri, 'Content-Type' => 'application/json')
+
+request.body = JSON.dump({
+    "commands" => commands
+})
+
+http.request(request)
 
 bot.get_updates(fail_silently: true) do |message|
     puts "@#{message.from.username}: #{message.text}"
