@@ -37,7 +37,7 @@ bot.get_updates(fail_silently: true) do |message|
         when /ruby/i
             reply.text = "you're running #{RUBY_VERSION}"
         when /help/i
-            reply.text = "Available commands: /start - to start the bot; /help - to get help; /echo [text] - to echo back the given text."
+            reply.text = "Available commands: /start - to start the bot; /help - to get help; /ruby get the ruby version."
         end
         puts "sending#{reply.text.inspect} to @#{message.from.username}"
         reply.send_with(bot)
