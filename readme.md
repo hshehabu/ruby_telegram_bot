@@ -11,7 +11,7 @@ A simple Telegram bot built with Ruby that responds to user commands, including 
 
 ### Prerequisites
 - **Ruby**: Make sure Ruby is installed. You can check by running `ruby -v` in your terminal.
-- **Telegram Bot Token**: Obtain a token by creating a bot with [BotFather](https://core.telegram.org/bots#botfather) on Telegram.
+- **Telegram Bot Token**: Obtain a token by creating a bot with [BotFather](https://telegram.me/BotFather) on Telegram.
 - **Dotenv**: Used to load environment variables from a `.env` file.
 - **Net::HTTP**: The standard library for making HTTP requests.
 
@@ -20,7 +20,7 @@ A simple Telegram bot built with Ruby that responds to user commands, including 
 
    ```bash
    git clone https://github.com/hshehabu/ruby_telegram_bot.git
-   cd your-repo-name
+   cd ruby_telegram_bot
 2. Install dependencies:
 
     ```bash
