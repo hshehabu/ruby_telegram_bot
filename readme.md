@@ -6,7 +6,6 @@ A simple Telegram bot built with Ruby that responds to user commands, including 
 - Start the bot with `/start`
 - Get help with `/help`
 - Display the current Ruby version with `/ruby_version`
-- Echo any text back with `/echo [text]`
 
 ## Setup
 
@@ -22,3 +21,13 @@ A simple Telegram bot built with Ruby that responds to user commands, including 
    ```bash
    git clone https://github.com/yourusername/your-repo-name.git
    cd your-repo-name
+2. Install dependencies:
+
+    ```bash
+    gem install dotenv telegram_bot
+3. Create a .env file in the project root to store your bot token:
+    ```bash
+    TELEGRAM_BOT_TOKEN=your_bot_token_here
+4. To start the bot, run:
+    ```bash
+    ruby bot.rb
