@@ -19,7 +19,7 @@ A simple Telegram bot built with Ruby that responds to user commands, including 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/hshehabu/ruby_telegram_bot.git
    cd your-repo-name
 2. Install dependencies:
 
